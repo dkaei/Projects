@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Case study 2: Data visualisation</title>
+
+        <!-- Libraries -->
+        <script src="lib/p5.min.js"></script>
+        <script src="lib/p5.dom.min.js"></script>
+        
+        <!-- Styles -->
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+        <!-- Main sketch file -->
+        <script src="sketch.js"></script>
+
+        <!-- Main visualisation files -->
+        <script src="main-js/tech-diversity-race.js"></script>
+        <script src="main-js/tech-diversity-gender.js"></script>
+        <script src="main-js/pay-gap-by-job-2017.js"></script>
+        <script src="main-js/pay-gap-1997-2017.js"></script>
+        <script src="main-js/climate-change.js"></script>
+        <script src="main-js/safe-water.js"></script>
+        <script src="main-js/air-quality.js"></script>
+
+        <!-- Add extra scripts below -->
+        <script src="extra-js/helper-functions.js"></script>
+        <script src="extra-js/gallery.js"></script>
+        <script src="extra-js/pie-chart.js"></script>
+    </head>
+    <body>
+        <div id="app" class="container">
+            <ul id="visuals-menu"></ul>
+            <p class="airInput">
+                Search by 3-Letter Country Code (in caps): <input id="countryCode" placeholder="SGP">
+            </p>
+        </div>
+    </body>
+</html>

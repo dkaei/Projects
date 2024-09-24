@@ -1,0 +1,1325 @@
+/*Custom Fonts-----------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+b {font-weight: 700;}
+
+/*Common CSS-----------------------------------------------------------------*/
+
+* {
+    z-index: 0;
+    font-family: Verdana, sans-serif; /* Fallback font */
+    font-family: "Cantarell", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+}
+
+body{
+    background-color:rgb(33,12,110);
+    font-size: 12px;
+    max-width: 100%;
+    overflow-x: hidden; /* Excess content is hidden to remove horizontal scroll bar */
+    cursor: url('cursors/cursorDark.png') 10 10, auto; /* Site default cursor */
+}
+
+section {display: inline;}
+
+.center { /* To center an element */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+h1{
+    font-size: 9vw;
+}
+
+h2{
+    font-weight: 700;
+    font-size: 7vw;
+}
+
+h3{
+    font-weight: 700;
+    font-size: 3.5vw;
+}
+
+h4{
+    font-weight: 700;
+    font-size: 2.5vw;
+}
+
+p{
+    font-size: 1.8vw;
+}
+
+/*Topnav CSS-----------------------------------------------------------------*/
+
+.topnav {
+    z-index: 1;
+    overflow: hidden;
+    /* Keep the navigation bar at the top of screen */
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    margin: 13px 15px;
+    padding: 1px 1px;
+    text-decoration: none;
+    font-size: 17px;
+    cursor: url('cursors/cursorLight.png') 10 10, auto;
+    text-shadow: 1px 1px 1px black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+    color: rgb(140,105,222);
+    font-weight: 700;
+    background-color:transparent;
+    text-shadow: none;
+}
+
+.topnav a:hover {
+    font-size:19px;
+}
+
+/* Home button + site logo */
+.topnav a.title {
+    float: left;
+    color: rgb(21, 245, 186);
+    font-weight: 700;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding:2px;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    padding: 2px;
+    display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    .topnav.responsive {
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        background-color: rgba(33,12,110,0.9);
+    }
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 17%;
+        border-radius: 8px;
+    }
+    .topnav.responsive a:hover {background-color: rgba(140,105,222,0.5)}
+}
+
+/*Index.html CSS-----------------------------------------------------------------*/
+
+/* Container for intro texts */
+.intro {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 100px;
+}
+
+/* Base styling of intro texts */
+.introText {
+    font-family: "Archivo Black", sans-serif;
+    margin: 0em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Varied specific styling for each part of intro text */
+#intro1 {
+    width: 13%;
+    border-radius:10px;
+    color:rgb(33,12,110);
+}
+#intro2 {
+    width: 60%;
+    border-radius:20px;
+    color:rgb(244,243,246);
+}
+#intro3 {
+    width: 75%;
+    border-radius:25px;
+    margin-bottom: 1em;
+    color:rgb(33,12,110);
+}
+
+.line {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 4em;
+    margin-top: -0.5em;
+    margin-bottom: -0.5em;
+    padding: 0px;
+    color:rgb(33,12,110);
+}
+
+/*--------- Responsiveness ---------*/
+@media screen and (max-width: 600px) {
+    .intro {
+        padding-top: 50px;
+    }
+    #intro1 {
+        width: 30%;
+        font-size: 1.5em;
+    }
+    #intro2 {
+        width: 90%;
+        font-size: 4em;
+        padding-top:5vw;
+        padding-bottom:5vw;
+    }
+    #intro3 {
+        width: 90%;
+        font-size: 2em;
+        margin-bottom: 1vw;
+    }
+    .line {
+        display: none;
+    }
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: url('cursors/cursorLight.png') 10 10, auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: .4s;
+    transition: .4s;
+    background-color: rgb(33,12,110);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 52px;
+    left: 4px;
+    top: 4px;
+    -webkit-transition: .4s;
+    transition: .4s;
+    background-color: rgb(33,12,110);
+}
+
+input:checked + .slider {
+    background-color: rgb(153,135,200);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px rgb(153,135,200);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateY(26px);
+    -ms-transform: translateY(26px);
+    transform: translateY(26px);
+    cursor: url('cursors/cursorDark.png') 10 10, auto;
+}
+
+/* Airiva image */
+.airivaImg { /* Image container */
+    display: none;
+    width:1040px;
+    height:auto;
+    margin-top: 100px;
+    margin-bottom: 0px;
+    border-radius: 25px;
+    border: 3px solid rgb(91,63,170);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden; /* Excess portion of image hidden */
+}
+
+.airivaImg img { /* Image */
+    padding: 0;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: 1s ease;
+    transform: scale(1.1);
+}
+
+/* Airiva video */
+iframe {border: 0;}
+#airiva {
+    width: 1040px;
+    height: 591px;
+    display: none;
+    border-radius: 25px;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    border: 3px solid rgb(91,63,170);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: url('cursors/cursorLight.png') 10 10, auto;
+}
+
+/* Hover effect for both video and image */
+.airivaImg:hover {box-shadow: 0 4px 8px 0 rgba(21, 245, 186, 0.2), 0 6px 20px 0 rgba(21, 245, 186, 0.19); }
+.airivaImg img:hover {transform: scale(1);}
+#airiva:hover {box-shadow: 0 4px 8px 0 rgba(21, 245, 186, 0.2), 0 6px 20px 0 rgba(21, 245, 186, 0.19);}
+
+.airivaText {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-bottom: 60px;
+    font-size:2.5em;
+    font-weight: 700;
+    color: rgba(244,243,246,0.9);
+}
+
+.airivaText.text2 {
+    font-size:2em;
+    margin-top: -220px;
+    margin-left: 700px;
+}
+
+/*--------- Responsiveness ---------*/
+@media screen and (max-width: 1050px) {
+    #airiva {
+        width: 100%;
+        height: calc(100vw*0.54);
+        margin-top: 15vw;
+    }
+    .airivaText {
+        font-size:2em;
+        padding-bottom: 5vw;
+    }
+    .airivaText.text2 {
+        font-size:2.5vw;
+        margin-top: -20vw;
+        margin-left: 50vw;
+    }
+    .airivaImg {
+        width: 100%;
+        margin-top: 10vw;
+    }
+}
+
+/* Animation of elements on homepage after switch is activated */
+
+@keyframes moveUp {
+    from { opacity: 0%;
+        transform:translateY(10%);}
+    to { opacity: 100%;
+        transform:translateY(-40%);}
+}
+
+@keyframes shiftIntro {
+    from {
+        margin-bottom: 0em;
+        transform: scale(1) translateY(0%);
+    }
+
+    to {
+        margin-bottom: -0.4em;
+        transform: scale(0.7) translateY(-50%);
+    }
+}
+
+@keyframes shiftIntro2 {
+    from {
+        margin-bottom: 0em;
+        margin-top: 0em;
+        transform: scale(1) translateY(0%);
+    }
+
+    to {
+        margin-bottom: -0.5em;
+        margin-top: 0.2em;
+        transform: scale(0.7) translateY(-50%);
+    }
+}
+
+@keyframes rshiftIntro {
+    from {
+        margin-bottom: -0.4em;
+        transform: scale(0.7) translateY(-50%);
+    }
+
+    to {
+        margin-bottom: 0em;
+        transform: scale(1) translateY(0%);
+    }
+}
+
+@keyframes rshiftIntro2 {
+    from {
+        margin-bottom: -0.5em;
+        margin-top: 0.2em;
+        transform: scale(0.7) translateY(-50%);
+    }
+
+    to {
+        margin-bottom: 0em;
+        margin-top: 0em;
+        transform: scale(1) translateY(0%);
+    }
+}
+
+/*about.html CSS-----------------------------------------------------------------*/
+
+/* Container for all the about cards */
+.abouts {
+    display:block;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7rem;
+    color: rgb(244,243,246);
+}
+
+/* Styling for each about card */
+.about {
+    background-color: rgb(244,243,246);
+    background-image: linear-gradient(rgba(47, 17, 156,1),rgba(47, 17, 156,0.9));
+    border-radius: 12px;
+    border-style: solid;
+    border-color: rgb(104, 106, 121);
+    border-width: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s;
+    padding: 14px 20px;
+    margin-top: 50px;
+    opacity: 0%;
+}
+.abouts h2 {
+    font-size: 36px;
+    text-align: center;
+    margin: 50px;
+}
+.about h3 {
+    font-size: 24px;
+    margin-left: 16px;
+}
+.about p {
+    font-size: 16px;
+    margin-left: 24px;
+    margin-right:24px;
+}
+
+/* Hover effect for each about card */
+.about:hover {
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+    padding: 20px 20px;
+}
+
+.about .link {
+    display: block;
+    max-width: 30%;
+    color: rgb(244,243,246);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    cursor: url('cursors/cursorLight.png') 10 10, auto;
+}
+
+.about .link2 {
+    color: rgb(244,243,246);
+    cursor: url('cursors/cursorLight.png') 10 10, auto;
+}
+
+/* Initialise slide texts and images */
+.slideText {display:none;}
+.mySlides {display: none;}
+.mySlides img {
+    width:100%;
+    vertical-align: middle;
+    border-radius: 8px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 80%;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: url('cursors/leftArrow.png') 12 12, auto;
+    position: absolute;
+    top: 0;
+    height:100%;
+    padding-right:50%;
+    transition: 0.6s ease;
+    border-radius: 8px 0px 0px 8px;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    cursor: url('cursors/rightArrow.png') 12 12, auto;
+    right: 0;
+    border-radius: 0px 8px 8px 0px;
+}
+
+.caption {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.caption2 {
+    color: black;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: url('cursors/cursorLight.png') 10 10, auto;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.dots {
+    position: absolute;
+    bottom: 8px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+}
+.dotActive, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+}
+
+/* Alternate animation for the about cards */
+
+@keyframes moveRight {
+    from { opacity: 0%;
+        transform:translateX(-10%);}
+    to { opacity: 100%;
+        transform:translateX(0%);}
+}
+
+@keyframes moveLeft {
+    from { opacity: 0%;
+        transform:translateX(10%);}
+    to { opacity: 100%;
+        transform:translateX(0%);}
+}
+
+@keyframes rmoveRight {
+    from { opacity: 100%;
+        transform:translateX(0%);}
+    to { opacity: 0%;
+        transform:translateX(-10%);}
+}
+
+@keyframes rmoveLeft {
+    from { opacity: 100%;
+        transform:translateX(0%);}
+    to { opacity: 0%;
+        transform:translateX(10%);}
+}
+
+/*works.html CSS-----------------------------------------------------------------*/
+
+/* Container for all projects */
+.works {
+    color: rgb(244,243,246);
+}
+/* Text styling setup */
+.works h2 {
+    font-size: 36px;
+    text-align: center;
+    margin: 50px;
+}
+.works h3 {
+    font-size: 24px;
+    border-top: 2px solid white;
+    padding-top: 3%;
+    padding-bottom: 1%;
+}
+.works h4 {
+    display: none;
+}
+.works p {
+    font-size: 1vw;
+    margin: 0;
+    padding: 0;
+}
+
+/* Segment container for each project */
+.work {
+    display: block;
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Project texts */
+.workText {
+    display: inline-block;
+    width: 55%;
+    margin-left: 4%;
+    vertical-align: baseline;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.workText2 {
+    display: inline-block;
+    width: 55%;
+    margin-right: 4%;
+    margin-top: 2%;
+    vertical-align: top;
+}
+
+/* Individual container for each project image/video */
+.workImg {
+    display: inline-block;
+    width: 40%;
+    margin-right: auto;
+    border-radius:8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    border: 2px solid rgba(255,255,255,0.5);
+    overflow: hidden;
+}
+.workImg2 {
+    display: inline-block;
+    width: 40%;
+    border-radius:8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    border: 2px solid rgba(255,255,255,0.5);
+    margin-top: 2%;
+    margin-bottom: 2%;
+    overflow: hidden;
+}
+
+/* Project videos/images */
+.workImg video, .workImg img {
+    padding: 0;
+    display: block;
+    width: 100%;
+    height: auto; /* Make the video/image fill the individual container */
+    transition: 1s ease; /* Allow for smooth transition */
+}
+.workImg2 video, .workImg2 img {
+    padding: 0;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: 1s ease;
+}
+
+/* Hover effect for project videos and images */
+.workImg video:hover, .workImg img:hover {
+    box-shadow: 0 8px 16px 0 rgba(21, 245, 186,0.2);
+    transform: scale(1.1);
+}
+.workImg2 video:hover, .workImg2 img:hover {
+    box-shadow: 0 8px 16px 0 rgba(21, 245, 186,0.2);
+    transform: scale(1.1);
+}
+
+/*--------- Responsiveness ---------*/
+@media screen and (max-width: 1350px) {
+    .workImg {width: 50%;}
+    .workImg2 {width: 50%;}
+    .workText {width: 45%;}
+    .workText2 {width: 45%;}
+    .works p {font-size: 1.15vw;}
+}
+@media screen and (max-width: 1050px) {
+    .workImg {width: 100%;}
+    .workImg2 {width: 100%;}
+    .workText {width: 100%; margin:0; margin-top:4%;}
+    .workText2 {width: 100%; margin:0; margin-top:2%; margin-bottom:4%;}
+    .works p {font-size: 14px;}
+}
+
+/*resources.html CSS-----------------------------------------------------------------*/
+
+/* Container for all resources */
+.resources {
+    display: block;
+    width: 90%;
+    color: rgb(244,243,246);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Text styling setup */
+.resources h2 {
+    font-size: 36px;
+    text-align: center;
+    margin: 50px;
+}
+.resources p {
+    font-size: 16px;
+    margin: 0;
+    padding: 18px;
+    text-align: justify;
+    text-align-last: left;
+}
+.resources i {
+    font-size: 17px;
+    font-style: italic;
+}
+
+/* Segment container for each resource type */
+.resource {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+/* Setup for collapsible effect (toggle open/close sections) */
+.collapsible {
+    background-color: rgb(91,63,170);
+    color: rgb(244,243,246);
+    cursor: pointer;
+    padding: 18px;
+    margin: 0;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.3);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    cursor: url('cursors/cursorLight2.png') 10 10, auto;
+    text-align: center;
+    transition: border-radius 0.3s ease-in;
+}
+
+.resource .head {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.resource h3 {
+    display: none;
+}
+
+/* Hover effect on resource buttons */
+.active, .collapsible:hover {
+    background-color: rgb(110,75,192);
+}
+
+.active {
+    transition: none;
+    border-radius: 25px 25px 0px 0px;
+}
+
+/* Hidden texts to be shown upon toggle */
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: rgb(71,43,150);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 0px 0px 25px 25px;
+}
+
+/* Styling of hyperlinks */
+.articleLink {
+    display: block;
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: rgb(21, 245, 186);
+    font-size: 14px;
+    font-weight: 400;
+    padding: 4px;
+    margin-bottom: 4px;
+    cursor: url('cursors/cursorLight.png') 10 10, auto;
+}
+.videoLink {
+    display: block;
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: rgb(21, 245, 186);
+    font-size: 14px;
+    font-weight: 400;
+    padding: 4px;
+    margin-bottom: 4px;
+    cursor: url('cursors/cursorLight.png') 10 10, auto;
+}
+.shareRes a {
+    color: rgb(244,243,246);
+    cursor: url('cursors/cursorLight.png') 10 10, auto;
+}
+
+/*contact.html CSS-----------------------------------------------------------------*/
+
+/* Container for both contact sections - (1) Contact form, (2) Email form */
+.contacts {
+    display: block;
+    width: 90%;
+    color: rgb(244,243,246);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Text styling */
+.contacts h2 {
+    font-size: 36px;
+    text-align: center;
+    margin: 50px;
+}
+.contact h3 {
+    font-size: 18px;
+    border-top: 2px solid white;
+    padding-top: 3%;
+}
+.contact p {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Segment container for each contact section */
+.contact {
+    display: block;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* (1) Contact form */
+
+.contactForm { /* Form container */
+    display: block;
+    width:60%;
+    background-color: rgba(91,63,170,0.5);
+    padding: 20px 40px;
+    border-radius: 8px;
+    margin: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.contactForm label {
+    display: block;
+    margin-top: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: url('cursors/cursorDark.png') 10 10, auto;
+}
+.contactForm input[type=text] { /* Input field: Name, email, phone number */
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: rgb(244,243,246);
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    border-radius: 8px;
+}
+.contactForm textarea { /* Input field: Message */
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: rgb(244,243,246);
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    resize: none;
+}
+.contactForm input[type=submit] { /* Submit button */
+    display:block;
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(244,243,246);
+    cursor: url('cursors/cursorLight.png') 10 10, auto;
+    box-sizing: border-box;
+    border-radius:4px;
+    border: 2px solid #ccc;
+}
+/* Input fields focus effect */
+.contactForm input[type=text]:focus {
+    border: 3px solid rgb(21, 245, 186);
+}
+.contactForm textarea:focus {
+    border: 3px solid rgb(21, 245, 186);
+}
+/* Submit button hover effect */
+.contactForm input[type=submit]:hover {
+    background-color: rgb(21, 245, 186);
+    border: 2px solid gray;
+}
+
+.contactEmail {
+    display: block;
+    width: 50%;
+    margin-bottom: 10%;
+}
+
+/* To be displayed upon submission of contact form */
+.afterSubmit {
+    display: none;
+    width:60%;
+    background-color: rgba(21, 245, 186,0.5);
+    padding: 20px 40px;
+    border-radius: 8px;
+    margin: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.afterSubmit h3 {
+    border: none;
+    margin-top: 0;
+}
+
+/* (2) Email form */
+
+.emailForm2 { /* Form container */
+    display:block;
+    margin-left: 12px;
+    margin-top: 12px; 
+}
+.emailForm2 label[for=email] {
+    color: rgb(244,243,246);
+    font-size: 16px;
+    text-align: center;
+    cursor: url('cursors/cursorDark.png') 10 10, auto;
+}
+.emailForm2 input[type=email], select { /* Input field: Email */
+    font-size: 14px;
+    width: 80%;
+    padding: 4px 6px;
+    margin-top: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: black;
+    background-color: rgb(244,243,246);
+}
+.emailForm2 input[type=submit] { /* Submit button */
+    font-size: 14px;
+    background-color: rgb(91,63,170);
+    color: rgb(244,243,246);
+    padding: 2px 4px;
+    margin-left: 4px;
+    padding-left: 6px;
+    border: none;
+    border-radius: 4px;
+    cursor: url('cursors/cursorLight2.png') 10 10, auto;
+}
+/* Submit button hover effect */
+.emailForm2 input[type=submit]:hover {
+    background-color: rgb(140,105,222);
+}
+
+/* To be displayed upon submission of email form */
+.afterSubmit2 {
+    display: none;
+    width:60%;
+    background-color: rgba(21, 245, 186,0.4);
+    padding: 20px 40px;
+    border-radius: 8px;
+    margin: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    margin-bottom:90px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.afterSubmit2 h3 {
+    border: none;
+    margin-top: 0;
+}
+
+/* Animation of feedback text upon submission of form */
+@keyframes shiftUp {
+    from {opacity: 0%; transform:translateY(20%);}
+    to {opacity: 100%;
+        transform:translateY(0%);}
+}
+
+/*--------- Responsiveness ---------*/
+@media screen and (max-width: 1050px) {
+    .contactForm input[type=text] {width:100%;}
+    .contactEmail {width:100%;}
+}
+
+/*Footer CSS-----------------------------------------------------------------*/
+
+/* Container for all page content, including top navigation bar and footer */
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Excludes footer */
+#content-wrap {
+    padding-bottom: 7rem; /* Footer height */
+}
+
+/* Footer container */
+#footer {
+    visibility: hidden; /* To be set to visible in sketch.js */
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    height: 7rem; /* Footer height */
+    background-color: rgb(4, 6, 21);
+    background-image: linear-gradient(rgba(33,12,110,0.8),rgba(33,12,110,0.6));
+    padding: 0px;
+    margin: 0px;
+    border-radius: 8px;
+    border-color: rgba(255, 255, 255, 0.4);
+    border-style: solid;
+    border-width: 0px;
+    border-top-width: 1px;
+    cursor: url('cursors/cursorDark.png') 10 10, auto;
+}
+
+.footerColumn {
+    float: left;
+}
+
+/* Left section: Email subscription form */
+.footerLeft {
+    width: 20%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+}
+
+/* Middle section: Awards showcase */
+.footerMiddle { 
+    width: 49%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    border-width: 0px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-color: rgba(255, 255, 255, 0.1);
+    border-style: solid;
+}
+
+/* Right section: Social media and contact links */
+.footerRight {
+    float: right; 
+    width: 20%;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    height:7rem;
+}
+
+/* Clear floats after the columns */
+.footerRow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 1050px wide, make the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1050px) {
+    #content-wrap {
+        padding-bottom: 21rem;
+    }   
+    #footer {
+        height: 21rem;
+    }
+    .footerColumn {
+        float:none;
+        display: block;
+        height: 7rem;
+        width: 90%;
+        text-align:center;
+        margin-left:auto;
+        margin-right:auto;
+        border-width: 0px;
+        border-top-width: 1px;
+        border-color: rgba(255, 255, 255, 0.1);
+        border-style: solid;
+    }
+}
+
+/* Email subscription form */
+
+.emailForm { /* Form container */
+    display:block;
+    margin-left: 12px;
+    margin-top: 12px; 
+}
+.emailForm label[for=email] { /* Form prompt */
+    color: rgb(244,243,246);
+    font-size: 16px;
+    text-align: center;
+    cursor: url('cursors/cursorDark.png') 10 10, auto;
+}
+.emailForm input[type=email], select { /* Input field */
+    font-size: 14px;
+    width: 80%;
+    padding: 4px 6px;
+    margin-top: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: black;
+    background-color: rgb(244,243,246);
+}
+.emailForm input[type=submit] { /* Submit button */
+    font-size: 14px;
+    background-color: rgb(91,63,170);
+    color: rgb(244,243,246);
+    padding: 2px 4px;
+    margin-left: 4px;
+    padding-left: 6px;
+    border: none;
+    border-radius: 4px;
+    cursor: url('cursors/cursorLight2.png') 10 10, auto;
+}
+/* Hover effect on submit button */
+.emailForm input[type=submit]:hover {
+    background-color: rgb(140,105,222);
+}
+
+/* Awards showcase */
+
+#awards { /* Showcase container */
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:1%;
+    margin-right:1%;
+}
+/* Individual container for each award */
+.award {
+    max-width: 23%;
+    max-height: 4rem;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    margin: auto;
+    filter: brightness(80%);
+    transition: 1s ease;
+}
+/* Hover effect on each award */
+.award:hover {
+    filter: brightness(100%) drop-shadow(2px 8px 10px rgb(91,63,170));
+    box-shadow: 0 0 10px 1px var(--main-color);
+    transform: translateY(-10%) scale(1.1);
+}
+
+/* Social media and contact links */
+
+#socials { /* Container for social icons */
+    max-height:5rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:10px;
+    margin-right:10px;
+}
+/* Individual container each social icon */
+.social{
+    max-width:100%;
+    margin-left:1%;
+    margin-right:1%;
+    cursor: url('cursors/cursorLight.png') 10 10, auto;
+}
+.social img { /* social icon */
+    height: 42px;
+    width: 42px;
+    border-radius:50px;
+    border-width: 0px;
+    border-top-width: 1px;
+    border-color: rgba(255, 255, 255, 0.1);
+    border-style: solid;
+    filter:contrast(85%) drop-shadow(1px 1px 4px rgba(91,63,170,0.5));
+    transition: 0.3s ease;
+}
+/* Hover effect on each social icon */
+.social img:hover {
+    filter: invert(100%) drop-shadow(2px 8px 10px rgb(91,63,170));
+    box-shadow: 0 0 10px 1px var(--main-color);
+    transform: translateY(-10%) scale(1.1);
+}
+
+.contactme {
+    display: block;
+    text-align: center;
+    max-height:2rem;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin: 0px;
+    font-size: 16px;
+    color: rgb(244,243,246);
+}
+
+.copyright {
+    text-align: center;
+    font-size:12px;
+    color: rgb(244,243,246);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0.8rem;
+    padding-top: 0.2rem;
+    margin: 0px;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+
+/* Snackbar to notify successful email subscription */
+#snackbar {
+    visibility: hidden;
+    width: 250px;
+    margin-left: -125px;
+    background-color: rgb(21, 245, 186);
+    color: black;
+    text-align: center;
+    border-radius: 25px;
+    padding: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed;
+    z-index: 1; /* Position it in front of other elements */
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+/* Snackbar display and animation when toggled */
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Snackbar to notify invalid form submission */
+#snackbar2 {
+    visibility: hidden;
+    width: 350px;
+    margin-left: -175px;
+    background-color: rgb(245, 30, 80);
+    color: white;
+    text-align: center;
+    border-radius: 25px;
+    padding: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+#snackbar2.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animation for both snackbars */
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}

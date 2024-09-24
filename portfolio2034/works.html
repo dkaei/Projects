@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Winnie Boon - Works</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Meta Data for Works Page -->
+        <meta name="description" content="This page covers some of Winnie Boon's recent works.">
+        <meta name="author" content="Winnie Boon">
+        
+        <!-- Web Icon -->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+        <!-- Global Styles -->
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+        <!-- Main interactive sketch JS -->
+        <script src="libraries/p5.min.js"></script>
+        <script src="libraries/p5.dom.min.js"></script>
+        <script src="scripts/sketch.js"></script>
+    </head>
+    <body>
+        <!-- Page container holds all the content on the page, including navigation and footer. Content wrap excludes the footer. -->
+        <div id="page-container">
+            <div id="content-wrap">
+                <!-- Top Navigation Bar -->
+                <nav class="topnav" id="myTopnav">
+                    <!-- Home button with site branding -->
+                    <a href="index.html" class="navBtn title">WB</a>
+                    <!-- Navigation links to other parts of the website, with current page marked .active -->
+                    <a href="contact.html" class="navBtn">contact</a>
+                    <a href="resources.html" class="navBtn">resources</a>
+                    <a href="works.html" class="navBtn active">works</a>
+                    <a href="about.html" class="navBtn">about</a>
+                    <!-- Responsive navigation toggle for mobile view -->
+                    <a href="javascript:topNav.js;" class="navBtn icon" onclick="TopNav()">&#9776;</a>
+                </nav>
+                <!-- 
+                Main content: Each project is wrapped in an <article> tag and structured with <section> tags.
+                -->
+                <main class="works">
+                    <h2>My works</h2>
+                    <!-- Project 1: Puzzle Minivan -->
+                    <article class="work">
+                        <h3>Collaborative Project with HW Electro: The Puzzle Minivan</h3>
+                        <!-- Top interactive image/video -->
+                        <section class="workImg">
+                            <h4>Puzzle Minivan video</h4>
+                            <video id="vanVideo" autoplay muted>
+                            <source src="assets/minivan/vanVideo2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.</video>
+                        </section>
+                        <!-- Text section -->
+                        <section>
+                            <h4>Puzzle Minivan text</h4>
+                            <div class="workText">
+                            <p>In collaboration with HW Electro, I played a key role in the development of the Puzzle, a modular electric minivan that represents the future of sustainable mobility. The Puzzle is a groundbreaking vehicle designed to offer maximum customization and adaptability, inspired by the concept of a puzzle. Its modular architecture allows users to interchange parts easily, tailoring the vehicle to various needs — from a family car to an emergency response unit.</p>
+                            <br>
+                            <p>What sets the Puzzle apart is its integration of solar panels, which not only power the vehicle but also serve as a mobile energy source, providing electricity in remote locations or during emergencies. This feature enhances the minivan’s sustainability, allowing it to function as a self-sufficient mobile unit. The design also incorporates WLAN access, ensuring that users remain connected even in areas with poor signal coverage.</p>
+                        </div>
+                            <div class="workText2">
+                            <p>The Puzzle's interior is just as innovative, with large, versatile spaces that can be customized with additional features like shelves or storage units. The doors are designed to swing outward in various directions, maximizing space and providing easier access.</p>
+                            <br>
+                            <p>Overall, the Puzzle by HW Electro is more than just a vehicle — it's a multifunctional, eco-friendly solution that could redefine mobility and energy use, particularly in areas where sustainability is a priority.</p>
+                        </div>
+                        </section>
+                        <!-- Bottom interactive image/video -->
+                        <section class="workImg2">
+                            <h4>Puzzle Minivan video</h4>
+                            <video id="vanVideo2" autoplay muted>
+                            <source src="assets/minivan/vanVideo1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.</video>
+                        </section>
+                    </article>
+                    <!-- Project 2: Air Purification Drone -->
+                    <article class="work">
+                        <h3>Air Purification Drone System</h3>
+                        <!-- Top interactive image/video -->
+                        <section class="workImg">
+                            <h4>Drone System image</h4>
+                            <img id="droneImg" src="assets/drone/3r.png" alt="an unlit air purification drone in light environment">
+                        </section>
+                        <!-- Text section -->
+                        <section>
+                            <h4>Drone System text</h4>
+                            <div class="workText">
+                            <p>I developed an innovative air purification system that employs autonomous drones to tackle the increasingly critical issue of air pollution in large, open spaces. As air quality continues to deteriorate globally due to industrial emissions, wildfires, and urbanization, our system offers a dynamic solution that can adapt to changing conditions and cover expansive areas efficiently.</p>
+                            <br>
+                            <p>The drone system is designed to purify the air in environments such as factories, warehouses, and large public spaces. Each drone is equipped with advanced filtration technology and can detect pollutants in real-time. By coordinating their movements, these drones ensure that even the most polluted areas receive the necessary attention, providing comprehensive air purification that stationary systems simply cannot achieve.</p>
+                        </div>
+                            <div class="workText2">
+                            <p>Powered by sustainable energy sources, this system not only addresses the immediate need for cleaner air but also aligns with the global push toward green technologies. The drones' ability to respond to real-time data means they can adapt to sudden changes in air quality, such as those caused by nearby wildfires or industrial accidents, making them a crucial tool in managing air pollution in a rapidly changing world.</p>
+                            <br>
+                            <p>This project exemplifies my commitment to leveraging advanced technology to create sustainable solutions that can make a tangible difference in the fight against global air pollution.</p>
+                        </div>
+                        </section>
+                        <!-- Bottom interactive image/video -->
+                        <section class="workImg2">
+                            <h4>Drone System image</h4>
+                            <img id="droneImg2" src="assets/drone/1r.png" alt="air purification drone detaching from setup">
+                        </section>
+                    </article>
+                    <!-- Project 3: Biodegradable Smart Packaging -->
+                    <article class="work">
+                        <h3>Biodegradable Smart Packaging</h3>
+                        <!-- Top interactive image/video -->
+                        <section class="workImg">
+                            <h4>Biodegradable Packaging image</h4>
+                            <img id="bioImg" src="assets/biopackaging/5r.png" alt="a hand holding a biodegradable disposable cup">
+                        </section>
+                        <!-- Text section -->
+                        <section>
+                            <h4>Biodegradable Packaging text</h4>
+                            <div class="workText">
+                            <p>The Biodegradable Smart Packaging project represents a significant leap forward in sustainable packaging solutions. This innovative packaging material is designed to address two major challenges: reducing plastic waste and enhancing product freshness through smart technology.</p>
+                            <br>
+                            <p>The biodegradable material used in this packaging is derived from organic sources, ensuring that it decomposes naturally and does not contribute to the growing issue of plastic pollution. Unlike traditional packaging, which can take hundreds of years to break down, this smart packaging is designed to degrade within months, leaving no harmful residues behind.</p>
+                        </div>
+                            <div class="workText2">
+                            <p>What truly sets this packaging apart is its integration of smart sensors that monitor the freshness of the product inside. These sensors can detect changes in temperature, humidity, and even the presence of gases that indicate spoilage. The packaging can then provide real-time updates to consumers or retailers, helping to reduce food waste by ensuring products are used while they are still fresh. Additionally, this technology can be integrated with mobile apps, allowing users to track the freshness of their products remotely.</p>
+                            <br>
+                            <p>This project is particularly important in the context of global sustainability efforts. As the world continues to grapple with the environmental impact of single-use plastics, biodegradable smart packaging offers a viable and scalable solution that can be adopted across various industries, from food and beverages to pharmaceuticals. By combining biodegradability with smart technology, this packaging not only helps reduce waste but also improves the efficiency of supply chains and extends the shelf life of products, ultimately contributing to a more sustainable and waste-free future.</p>
+                        </div>
+                        </section>
+                        <!-- Bottom interactive image/video -->
+                        <section class="workImg2">
+                            <h4>Biodegradable Packaging image</h4>
+                            <img id="bioImg2" src="assets/biopackaging/1r.png" alt="biodegradable salt and pepper bottles">
+                        </section>
+                    </article>
+                    <!-- Project 4: Smart Energy Management System -->
+                    <article class="work">
+                        <h3>Smart Energy Management System</h3>
+                        <!-- Top interactive image/video -->
+                        <section class="workImg">
+                            <h4>Smart Energy System image</h4>
+                            <img id="energyImg" src="assets/energy/4.png" alt="an abstract illustration of smart energy home management system">
+                        </section>
+                        <!-- Text section -->
+                        <section>
+                            <h4>Smart Energy System text</h4>
+                            <div class="workText">
+                            <p>I was part of the Smart Energy Management System project which was designed to optimize energy use in buildings by integrating IoT sensors and AI algorithms. It monitors energy consumption in real-time, using data from various sources like temperature and occupancy to make smart adjustments. This approach ensures that energy is used efficiently without compromising comfort.</p>
+                            <br>
+                            <p>IoT sensors track key parameters throughout the building, feeding data into AI algorithms that detect patterns and predict energy needs. The system then automatically adjusts energy usage, such as dimming lights or regulating heating, to reduce waste and enhance efficiency. This automation provides significant energy savings while maintaining a comfortable environment.</p>
+                        </div>
+                            <div class="workText2">
+                            <p>A key feature of the system is its ability to learn and improve over time. The AI continuously analyzes data, becoming more accurate in optimizing energy consumption, which can lead to up to 30% reductions in energy use. These savings not only cut costs but also contribute to a building’s sustainability by lowering its carbon footprint.</p>
+                            <br>
+                            <p>This system is particularly valuable for smart cities and sustainable buildings, where efficient energy management is crucial. It offers a scalable solution that can be applied to various settings, from homes to commercial buildings, demonstrating how technology can drive significant environmental and economic benefits.</p>
+                        </div>
+                        </section>
+                        <!-- Bottom interactive image/video -->
+                        <section class="workImg2">
+                            <h4>Smart Energy System image</h4>
+                            <img id="energyImg2" src="assets/energy/3.png" alt="solar panels installed at a park used as shade for picnics">
+                        </section>
+                    </article>
+                    <!-- Project 5: Smart Streetlights -->
+                    <article class="work">
+                        <h3>Collaborative Project with Vantot: Sun-Chasing Solar-Powered Streetlights</h3>
+                        <!-- Top interactive image/video -->
+                        <section class="workImg">
+                            <h4>Smart Streetlight video</h4>
+                            <video id="lightVideo" src="assets/streetlight/lightVideo.mp4" muted="muted">
+                            Your browser does not support the video tag.</video>
+                        </section>
+                        <!-- Text section -->
+                        <section>
+                            <h4>Smart Streetlight text</h4>
+                            <div class="workText">
+                            <p>In collaboration with Vantot, I developed the Sun-Chasing Solar-Powered Streetlights, a breakthrough in sustainable urban design. These streetlights are engineered to move and rotate, continuously adjusting to follow the sun’s path throughout the day. This innovation maximizes solar energy absorption by ensuring the panels are always oriented towards the strongest sunlight, overcoming the limitations of static solar-powered lights.</p>
+                            <br>
+                            <p>The design of these streetlights draws inspiration from the natural behavior of sunflowers, which follow the sun to optimize photosynthesis. Similarly, the Sunseeker technology in these lights ensures that they capture every possible ray of sunlight, even in less ideal conditions. This not only keeps the lights powered longer but also reduces the dependency on traditional energy sources. The result is a streetlight system that is not only more sustainable but also significantly more cost-effective for cities, potentially reducing both energy consumption and maintenance costs.</p>
+                        </div>
+                            <div class="workText2">
+                            <p>Beyond their functional benefits, these solar-powered streetlights also contribute to the aesthetic appeal of urban spaces. Their dynamic movement, as they track the sun, creates a visually engaging display that enhances the city’s landscape. This blend of functionality and beauty exemplifies how sustainable technology can be seamlessly integrated into urban design, offering both practical benefits and an improved public experience.</p>
+                            <br>
+                            <p>This project underscores the potential of innovative design in addressing environmental challenges while also enhancing urban living. By combining technological innovation with ecological sensitivity, the Solar-Powered Streetlights with Sun-Chasing Technology set a new benchmark for sustainable urban infrastructure. This collaboration with Vantot highlights our shared commitment to creating solutions that are not only environmentally responsible but also enrich the lives of city dwellers.</p>
+                        </div>
+                        </section>
+                        <!-- Bottom interactive image/video -->
+                        <section class="workImg2">
+                            <h4>Smart Streetlight image</h4>
+                            <img id="lightImg" src="assets/streetlight/4.png" alt="a row of street lights lighting the way at night">
+                        </section>
+                    </article>
+                    <br><br><br><br>
+                </main>
+            </div>
+            <!-- Footer structured into three columns -->
+            <footer id="footer" class="footerRow">
+                <!-- Left section: Email subscription form -->
+                <div class="footerColumn footerLeft">
+                    <form class="emailForm" onsubmit="return false">
+                        <label for="email">Stay updated on future innovations!</label>
+                        <input type="email" id="email" name="email" placeholder="Your email..">
+                        <input id="emailSubmit" type="submit" value="&#10148;">
+                    </form>
+                </div>
+                <!-- Middle section: Awards showcase -->
+                <div class="footerColumn footerMiddle">
+                    <div id="awards">
+                        <img class="award" src="assets/awards/7.png" title="2034 Sustainability Impact Awards (Winner)" alt="2034 Sustainability impact awards">
+                        <img class="award" src="assets/awards/1.png" title="2034 CES Innovation Awards (Winner)" alt="2034 CES innovation awards">
+                        <img class="award" src="assets/awards/2.png" title="2034 T3 Awards (Winner)" alt="T3 awards 2034 winner">
+                        <img class="award" src="assets/awards/3.png" title="2032 EG Tech Awards (Winner)" alt="EG Tech awards 2032">
+                        <img class="award" src="assets/awards/5.png" title="2032 Digi Green Tech Awards (Winner)" alt="2032 Green tech awards by Digi, winner of green vehicle technology category">
+                        <img class="award" src="assets/awards/4.png" title="2031 SDG Tech Awards (Nominee)" alt="SDG Tech awards denmark nominee 2031">
+                    </div>
+                </div>
+                <!-- Right section: Social media and contact links -->
+                <div class="footerColumn footerRight">
+                    <p class="contactme">Contact Me</p>
+                    <address id="socials">
+                        <a href="https://www.instagram.com/" target="_blank" class="social">
+                            <img src="assets/socials/instagram.png" alt="Instagram icon">
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank" class="social">
+                            <img src="assets/socials/linkedin.png" alt="Linkedin icon">
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank" class="social">
+                            <img src="assets/socials/youtube.png" alt="Youtube icon">
+                        </a>
+                        <a href="https://londoncs.slack.com/archives/D05UGL645N3" target="_blank" class="social">
+                            <img src="assets/socials/slack.png" alt="Slack icon">
+                        </a>
+                        <a href="mailto:kxwboon001@mymail.sim.edu.sg" target="_blank" class="social">
+                            <img src="assets/socials/email.png" alt="Email icon">
+                        </a>
+                    </address>
+                </div>
+            </footer>
+            <p class="copyright">© 2034 Winnie Boon. All rights reserved.</p>
+            <!-- Snackbar to notify successful email subscription -->
+            <div id="snackbar">I'll keep you updated!</div>
+        </div>
+        <!-- Global Scripts -->
+        <script src="scripts/topNav.js"></script>
+    </body>
+</html>

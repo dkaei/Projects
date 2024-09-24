@@ -1,0 +1,5 @@
+GHO - Safely managed drinking water services - Data by country:
+https://apps.who.int/gho/data/node.main.WSHWATER?lang=en
+
+latitude longitude - countries:
+https://developers.google.com/public-data/docs/canonical/countries_csv

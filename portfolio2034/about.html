@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Winnie Boon - About</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Meta Data for About Page -->
+        <meta name="description" content="This is the about page for Winnie Boon's portfolio in 2034.">
+        <meta name="author" content="Winnie Boon">
+        
+        <!-- Web Icon -->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+        <!-- Global Styles -->
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+        <!-- Main interactive sketch JS -->
+        <script src="libraries/p5.min.js"></script>
+        <script src="libraries/p5.dom.min.js"></script>
+        <script src="scripts/sketch.js"></script>
+    </head>
+    <body>
+        <!-- Page container holds all the content on the page, including navigation and footer. Content wrap excludes the footer. -->
+        <div id="page-container">
+            <div id="content-wrap">
+                <!-- Top Navigation Bar -->
+                <nav class="topnav" id="myTopnav">
+                    <!-- Home button with site branding -->
+                    <a href="index.html" class="navBtn title">WB</a>
+                    <!-- Navigation links to other parts of the website, with current page marked .active -->
+                    <a href="contact.html" class="navBtn">contact</a>
+                    <a href="resources.html" class="navBtn">resources</a>
+                    <a href="works.html" class="navBtn">works</a>
+                    <a href="about.html" class="navBtn active">about</a>
+                    <!-- Responsive navigation toggle for mobile view -->
+                    <a href="javascript:topNav.js;" class="navBtn icon" onclick="TopNav()">&#9776;</a>
+                </nav>
+                <!-- 
+                Main content: Each information card is wrapped in an <article> tag.
+                -->
+                <main class="abouts">
+                    <h2>About me</h2>
+                    <article class="about">
+                        <h3>Introduction</h3>
+                        <p>As we step into 2034, I'm excited to share my journey and the work I've been dedicated to over the past decade. With a strong foundation in Computer Science and a deep commitment to sustainability, I've focused on inventing and implementing technologies that drive positive environmental change and improve quality of life globally.</p>
+                    </article>
+                    <article class="about">
+                        <h3>Education and Early Career</h3>
+                        <p>I graduated with a BSc in Computer Science under University of London in 2026, where I laid the groundwork for my career in technology. My early projects centered around sustainable solutions, which sparked my lifelong passion for environmental innovation. Over the years, I have continuously expanded my knowledge and skills, keeping pace with the rapid advancements in technology and sustainability.</p>
+                    </article>
+                    <article class="about">
+                        <h3>Achievements and Innovations</h3>
+                        <p>In the past decade, I have been fortunate to work on several groundbreaking projects that reflect my commitment to sustainability and innovation. Here are some highlights:</p>
+                        <br>
+                        <!-- Slideshow container for project highlights -->
+                        <div class="slideshow-container">
+                            <div class="mySlides fade">
+                                <div class="caption">Solar-Powered Air Purification Drone:</div>
+                                <img src="assets/about/1.png" alt="an LED-lit solar-powered air purification drone detached from its set-up">
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="caption2">Biodegradable Smart Packaging:</div>
+                                <img src="assets/about/2.png" alt="a hand holding a biodegradable disposable cup">
+                            </div>
+                            <div class="mySlides fade">
+                                <div class="caption">Smart Energy Management System:</div>
+                                <img src="assets/about/3.png" alt="a park with smart energy management system installed, showcasing smart streetlights and energy usage">
+                            </div>
+                            <div class="dots">
+                                <span class="dot" onclick="currentSlide(1)"></span> 
+                                <span class="dot" onclick="currentSlide(2)"></span> 
+                                <span class="dot" onclick="currentSlide(3)"></span> 
+                            </div>
+                            <a class="prev" onclick="plusSlides(-1)"></a>
+                            <a class="next" onclick="plusSlides(1)"></a>
+                        </div>
+                        <br>
+                        <!-- Text description for each slide, toggled in sketch.js -->
+                        <p class="slideText"><b>Solar-Powered Air Purification Drone:</b> Designed and developed an autonomous drone powered by solar energy to purify air in polluted urban areas, significantly improving air quality and public health.</p>
+                        <p class="slideText"><b>Biodegradable Smart Packaging:</b> Created innovative packaging material embedded with sensors to monitor food freshness, made from organic materials that decompose naturally, reducing plastic waste and food spoilage.</p>
+                        <p class="slideText"><b>Smart Energy Management System:</b> Developed a system that optimizes energy consumption in buildings using IoT sensors and AI algorithms, resulting in significant energy savings and reduced carbon footprint.</p>
+                        <p><a href="works.html" class="link">View more</a></p>
+                        <!-- JS for slideshow control and display -->
+                        <script>
+                            let slideIndex = 1;
+                            showSlides(slideIndex);
+                            function plusSlides(n) {
+                                showSlides(slideIndex += n);
+                            }
+                            function currentSlide(n) {
+                                showSlides(slideIndex = n);
+                            }
+                            function showSlides(n) {
+                                let i;
+                                let slides = document.getElementsByClassName("mySlides");
+                                let texts = document.getElementsByClassName("slideText");
+                                let dots = document.getElementsByClassName("dot");
+                                if (n > slides.length) {slideIndex = 1}    
+                                if (n < 1) {slideIndex = slides.length}
+                                for (i = 0; i < slides.length; i++) {
+                                    slides[i].style.display = "none";
+                                    texts[i].style.display = "none";
+                                }
+                                for (i = 0; i < dots.length; i++) {
+                                    dots[i].className = dots[i].className.replace(" dotActive", "");
+                                }
+                                slides[slideIndex-1].style.display = "block";
+                                texts[slideIndex-1].style.display = "block"; 
+                                dots[slideIndex-1].className += " dotActive";
+                            }
+                        </script>
+                    </article>
+                    <article class="about">
+                        <h3>Vision and Impact</h3>
+                        <p>My vision for the future has always been to harness the power of technology to create a sustainable world. Over the past decade, my work has focused on:</p>
+                        <p><b>Reducing Carbon Emissions:</b> Through innovative renewable energy projects and smart grid technologies, I've contributed to significant reductions in global carbon emissions.</p>
+                        <p><b>Promoting Circular Economy:</b> By developing biodegradable materials and advocating for sustainable manufacturing practices, I've helped industries transition to more sustainable models.</p>
+                        <p><b>Empowering Communities:</b> My projects in self-sustaining communities and smart cities have provided scalable solutions that enhance the quality of life and resilience of urban and rural areas alike.</p>
+                    </article>
+                    <article class="about">
+                        <h3>Looking Forward</h3>
+                        <p>As I look to the future, I remain committed to exploring new frontiers in sustainable technology. My goal is to continue creating solutions that address the world's most pressing environmental challenges while inspiring the next generation of innovators. I believe that with collaboration, creativity, and a shared vision, we can build a sustainable, prosperous future for all.</p>
+                    </article>
+                    <article class="about">
+                        <h3>Get in Touch</h3>
+                        <p>I am always eager to connect with fellow innovators, environmentalists, and anyone passionate about sustainability. If you are interested in my work, have collaboration ideas, or simply want to discuss the future of sustainable technology, please <a href="contact.html" class="link2">reach out</a>. Together, we can make a lasting impact.</p>
+                    </article>
+                </main>
+            </div>
+            <!-- Footer structured into three columns -->
+            <footer id="footer" class="footerRow">
+                <!-- Left section: Email subscription form -->
+                <div class="footerColumn footerLeft">
+                    <form class="emailForm" onsubmit="return false">
+                        <label for="email">Stay updated on future innovations!</label>
+                        <input type="email" id="email" name="email" placeholder="Your email..">
+                        <input id="emailSubmit" type="submit" value="&#10148;">
+                    </form>
+                </div>
+                <!-- Middle section: Awards showcase -->
+                <div class="footerColumn footerMiddle">
+                    <div id="awards">
+                        <img class="award" src="assets/awards/7.png" title="2034 Sustainability Impact Awards (Winner)" alt="2034 Sustainability impact awards">
+                        <img class="award" src="assets/awards/1.png" title="2034 CES Innovation Awards (Winner)" alt="2034 CES innovation awards">
+                        <img class="award" src="assets/awards/2.png" title="2034 T3 Awards (Winner)" alt="T3 awards 2034 winner">
+                        <img class="award" src="assets/awards/3.png" title="2032 EG Tech Awards (Winner)" alt="EG Tech awards 2032">
+                        <img class="award" src="assets/awards/5.png" title="2032 Digi Green Tech Awards (Winner)" alt="2032 Green tech awards by Digi, winner of green vehicle technology category">
+                        <img class="award" src="assets/awards/4.png" title="2031 SDG Tech Awards (Nominee)" alt="SDG Tech awards denmark nominee 2031">
+                    </div>
+                </div>
+                <!-- Right section: Social media and contact links -->
+                <div class="footerColumn footerRight">
+                    <p class="contactme">Contact Me</p>
+                    <address id="socials">
+                        <a href="https://www.instagram.com/" target="_blank" class="social">
+                            <img src="assets/socials/instagram.png" alt="Instagram icon">
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank" class="social">
+                            <img src="assets/socials/linkedin.png" alt="Linkedin icon">
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank" class="social">
+                            <img src="assets/socials/youtube.png" alt="Youtube icon">
+                        </a>
+                        <a href="https://londoncs.slack.com/archives/D05UGL645N3" target="_blank" class="social">
+                            <img src="assets/socials/slack.png" alt="Slack icon">
+                        </a>
+                        <a href="mailto:kxwboon001@mymail.sim.edu.sg" target="_blank" class="social">
+                            <img src="assets/socials/email.png" alt="Email icon">
+                        </a>
+                    </address>
+                </div>
+            </footer>
+            <p class="copyright">© 2034 Winnie Boon. All rights reserved.</p>
+            <!-- Snackbar to notify successful email subscription -->
+            <div id="snackbar">I'll keep you updated!</div>
+        </div>
+        <!-- Global Scripts -->
+        <script src="scripts/topNav.js"></script>
+    </body>
+</html>

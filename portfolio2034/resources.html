@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Winnie Boon - Resources</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Meta Data for Resources Page -->
+        <meta name="description" content="This page shares various helpful resources for people interested in sustainable technology.">
+        <meta name="author" content="Winnie Boon">
+        
+        <!-- Web Icon -->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+        <!-- Global Styles -->
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+        <!-- Main interactive sketch JS -->
+        <script src="libraries/p5.min.js"></script>
+        <script src="libraries/p5.dom.min.js"></script>
+        <script src="scripts/sketch.js"></script>
+    </head>
+    <body>
+        <!-- Page container holds all the content on the page, including navigation and footer. Content wrap excludes the footer. -->
+        <div id="page-container">
+            <div id="content-wrap">
+                <!-- Top Navigation Bar -->
+                <nav class="topnav" id="myTopnav">
+                    <!-- Home button with site branding -->
+                    <a href="index.html" class="navBtn title">WB</a>
+                    <!-- Navigation links to other parts of the website, with current page marked .active -->
+                    <a href="contact.html" class="navBtn">contact</a>
+                    <a href="resources.html" class="navBtn active">resources</a>
+                    <a href="works.html" class="navBtn">works</a>
+                    <a href="about.html" class="navBtn">about</a>
+                    <!-- Responsive navigation toggle for mobile view -->
+                    <a href="javascript:topNav.js;" class="navBtn icon" onclick="TopNav()">&#9776;</a>
+                </nav>
+                <!-- 
+                Main content: Each resource type is wrapped in an <article> tag. The buttons that contain .collapsible class toggle the visibility of each content, enabled by JS at the end of <body>.
+                -->
+                <main class="resources">
+                    <h2>Educational resources</h2>
+                    <!-- Resource type: Articles -->
+                    <article class="resource articles">
+                        <h3>Articles</h3>
+                        <button type="button" class="head collapsible">Articles</button>
+                        <div class="content"><br>
+                            <button type="button" class="collapsible">"The Role of AI in Achieving Sustainable Development Goals" <i>by Ricardo Vineusa and 10 others</i></button>
+                            <div class="content">
+                                <p>This article explores how artificial intelligence can be leveraged to meet global sustainability targets. It’s an insightful read for anyone interested in the intersection of AI and sustainability.</p>
+                                <a href="https://www.nature.com/articles/s41467-019-14108-y" target="_blank" class="articleLink">View article</a>
+                            </div><br>
+                            <button type="button" class="collapsible">"The evolution of smart cities: Integrating technology, governance, and sustainable development" <i>by Olubunmi Adeolu Adenekan and 2 others</i></button>
+                            <div class="content">
+                                <p>This article explores how urban environments are being transformed by integrating advanced technologies to address the challenges of sustainability.</p>
+                                <a href="https://fepbl.com/index.php/ijarss/article/view/1131" target="_blank" class="articleLink">View article</a>
+                            </div><br>
+                            <button type="button" class="collapsible">"Net Zero Energy Residential Building Architecture in the Future" <i>by Okay Gönülol and Ayça Tokuç</i></button>
+                            <div class="content">
+                                <p>This article covers the latest trends and technologies in constructing buildings that produce as much energy as they consume. It’s a great resource for architects and engineers focused on green building.</p>
+                                <a href="https://www.sciencedirect.com/science/article/abs/pii/B9780128137345000020" target="_blank" class="articleLink">View article</a>
+                            </div><br>
+                        </div>
+                    </article>
+                    <!-- Resource type: Books -->
+                    <article class="resource books">
+                        <h3>Books</h3>
+                        <button type="button" class="head collapsible">Books</button>
+                        <div class="content"><br>
+                            <button type="button" class="collapsible">"Designing Regenerative Cultures" <i>by Daniel Christian Wahl</i></button>
+                            <div class="content">
+                                <p>This book offers a comprehensive guide to creating systems that are sustainable, resilient, and regenerative. It’s an excellent resource for understanding the principles behind sustainable design and how to implement them.</p>
+                            </div><br>
+                            <button type="button" class="collapsible">"The Circular Economy: A Wealth of Flows" <i>by Ken Webster</i></button>
+                            <div class="content">
+                                <p>This book delves into the concept of the circular economy, exploring how resources can be reused and recycled to minimize waste. It’s a must-read for those interested in designing for sustainability.</p>
+                            </div><br>
+                            <button type="button" class="collapsible">"Sustainable Energy: Without the Hot Air" <i>by David J.C. MacKay</i></button>
+                            <div class="content">
+                                <p>This is a practical, data-driven guide that simplifies the complexities of sustainable energy solutions, making it accessible to a wide audience.</p>
+                            </div><br>
+                        </div>
+                    </article>
+                    <!-- Resource type: Videos -->
+                    <article class="resource videos">
+                        <h3>Videos</h3>
+                        <button type="button" class="head collapsible">Videos</button>
+                        <div class="content"><br>
+                            <button type="button" class="collapsible">"The Story of Stuff" <i>The Story of Stuff Project</i></button>
+                            <div class="content">
+                                <p>A short but powerful documentary that explains the lifecycle of products and the impact of consumerism on the environment. It’s a must-watch for anyone interested in sustainability.</p>
+                                <a href="https://www.youtube.com/watch?v=9GorqroigqM" target="_blank" class="videoLink">Watch video</a>
+                            </div><br>
+                            <button type="button" class="collapsible">"The climate crisis: Can smart ideas save the planet?" <i>DW Documentary</i></button>
+                            <div class="content">
+                                <p>This video explores how and to what extent high-tech solutions can help to protect the climate as well as the side effects of futher human intervention in nature.</p>
+                                <a href="https://www.youtube.com/watch?v=afPVy0yiLRw" target="_blank" class="videoLink">Watch video</a>
+                            </div><br>
+                            <button type="button" class="collapsible">"Sustainable by design: the key to unlock net-zero value chain" <i>TCSGlobal</i></button>
+                            <div class="content">
+                                <p>A series of TED Talks and webinars that feature innovators discussing their approaches to sustainable design. These videos are both educational and inspiring.</p>
+                                <a href="https://www.youtube.com/watch?v=t5q5JFlDunY" target="_blank" class="videoLink">Watch video</a>
+                            </div><br>
+                        </div>
+                    </article>
+                    <br><br>
+                    <p class="shareRes">If you would like to share other helpful resources, do contact me <a href="contact.html">here</a>!</p>
+                </main>
+                <br><br><br><br>
+            </div>
+            <!-- Footer structured into three columns -->
+            <footer id="footer" class="footerRow">
+                <!-- Left section: Email subscription form -->
+                <div class="footerColumn footerLeft">
+                    <form class="emailForm" onsubmit="return false">
+                        <label for="email">Stay updated on future innovations!</label>
+                        <input type="email" id="email" name="email" placeholder="Your email..">
+                        <input id="emailSubmit" type="submit" value="&#10148;">
+                    </form>
+                </div>
+                <!-- Middle section: Awards showcase -->
+                <div class="footerColumn footerMiddle">
+                    <div id="awards">
+                        <img class="award" src="assets/awards/7.png" title="2034 Sustainability Impact Awards (Winner)" alt="2034 Sustainability impact awards">
+                        <img class="award" src="assets/awards/1.png" title="2034 CES Innovation Awards (Winner)" alt="2034 CES innovation awards">
+                        <img class="award" src="assets/awards/2.png" title="2034 T3 Awards (Winner)" alt="T3 awards 2034 winner">
+                        <img class="award" src="assets/awards/3.png" title="2032 EG Tech Awards (Winner)" alt="EG Tech awards 2032">
+                        <img class="award" src="assets/awards/5.png" title="2032 Digi Green Tech Awards (Winner)" alt="2032 Green tech awards by Digi, winner of green vehicle technology category">
+                        <img class="award" src="assets/awards/4.png" title="2031 SDG Tech Awards (Nominee)" alt="SDG Tech awards denmark nominee 2031">
+                    </div>
+                </div>
+                <!-- Right section: Social media and contact links -->
+                <div class="footerColumn footerRight">
+                    <p class="contactme">Contact Me</p>
+                    <address id="socials">
+                        <a href="https://www.instagram.com/" target="_blank" class="social">
+                            <img src="assets/socials/instagram.png" alt="Instagram icon">
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank" class="social">
+                            <img src="assets/socials/linkedin.png" alt="Linkedin icon">
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank" class="social">
+                            <img src="assets/socials/youtube.png" alt="Youtube icon">
+                        </a>
+                        <a href="https://londoncs.slack.com/archives/D05UGL645N3" target="_blank" class="social">
+                            <img src="assets/socials/slack.png" alt="Slack icon">
+                        </a>
+                        <a href="mailto:kxwboon001@mymail.sim.edu.sg" target="_blank" class="social">
+                            <img src="assets/socials/email.png" alt="Email icon">
+                        </a>
+                    </address>
+                </div>
+            </footer>
+            <p class="copyright">© 2034 Winnie Boon. All rights reserved.</p>
+            <!-- Snackbar to notify successful email subscription -->
+            <div id="snackbar">I'll keep you updated!</div>
+        </div>
+        <!-- Scripts -->
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight){
+                        content.style.maxHeight = null;
+                    } else {
+                        if (this.classList.contains("head")) {
+                            content.style.maxHeight = content.scrollHeight*3 + "px";
+                        }
+                        else content.style.maxHeight = content.scrollHeight + "px";
+                    } 
+                });
+            }
+        </script>
+        <script src="scripts/topNav.js"></script>
+    </body>
+</html>

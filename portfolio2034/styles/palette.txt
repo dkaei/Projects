@@ -1,0 +1,14 @@
+deep blue (bg)
+rgb(33,12,110)
+
+primary purple
+rgb(140,105,222)
+
+secondary purple
+rgb(91,63,170)
+
+text white
+rgb(244,243,246)
+
+bright green
+rgb(21, 245, 186)

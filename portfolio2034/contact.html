@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Winnie Boon - Contact</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Meta Data for Contact Page -->
+        <meta name="description" content="This is the contact page.">
+        <meta name="author" content="Winnie Boon">
+        
+        <!-- Web Icon -->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+        <!-- Global Styles -->
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+        <!-- Main interactive sketch JS -->
+        <script src="libraries/p5.min.js"></script>
+        <script src="libraries/p5.dom.min.js"></script>
+        <script src="scripts/sketch.js"></script>
+    </head>
+    <body>
+        <!-- Page container holds all the content on the page, including navigation and footer. Content wrap excludes the footer. -->
+        <div id="page-container">
+            <div id="content-wrap">
+                <!-- Top Navigation Bar -->
+                <nav class="topnav" id="myTopnav">
+                    <!-- Home button with site branding -->
+                    <a href="index.html" class="navBtn title">WB</a>
+                    <!-- Navigation links to other parts of the website, with current page marked .active -->
+                    <a href="contact.html" class="navBtn active">contact</a>
+                    <a href="resources.html" class="navBtn">resources</a>
+                    <a href="works.html" class="navBtn">works</a>
+                    <a href="about.html" class="navBtn">about</a>
+                    <!-- Responsive navigation toggle for mobile view -->
+                    <a href="javascript:topNav.js;" class="navBtn icon" onclick="TopNav()">&#9776;</a>
+                </nav>
+                <!-- 
+                Main content: (1) Contact form and (2) Email subscription form 
+                -->
+                <main class="contacts">
+                    <h2>Contact Me</h2>
+                    <!-- (1) Contact form BEFORE submission -->
+                    <div class="contact beforeSubmit">
+                        <p>Thank you for your interest in my work! Whether you have a project in mind, questions about my innovations, or just want to connect, I’d love to hear from you. Please use the form below to get in touch, and I’ll respond as soon as possible.</p>
+                    </div>
+                    <form id="myForm" class="contactForm beforeSubmit" onsubmit="return false">
+                        <label for="cname">Name</label>
+                        <input type="text" id="cname" name="cname" placeholder="John Doe">
+                        <label for="cemail">Email</label>
+                        <input type="text" id="cemail" name="cemail" placeholder="johndoe1@gmail.com">
+                        <label for="cnumber">Phone Number</label>
+                        <input type="text" id="cnumber" name="cnumber" placeholder="+65 4321 0000">
+                        <label for="cmessage">Message</label>
+                        <textarea id="cmessage" name="cmessage" placeholder="Your message..."></textarea>
+                        <input id="contactSubmit" type="submit" value="Submit">
+                    </form>
+                    <div class="contact beforeSubmit">
+                        <p>Feel free to reach out regarding collaborations, consulting, speaking engagements, or any other inquiries related to sustainable technology and innovative design. Your feedback and ideas are always welcome!</p>
+                    </div>
+                    <!-- (1) Contact form AFTER submission -->
+                    <div class="contact afterSubmit">
+                        <h3 id="automated">Thank you for reaching out!</h3>
+                        <p>Your message has been successfully submitted. I appreciate your interest and will get back to you as soon as possible. In the meantime, feel free to explore my latest projects and innovations on the website.</p>
+                        <br>
+                        <p>If your inquiry is urgent, you can also reach me directly at winnieboon@ecotech.com.</p>
+                        <br>
+                        <p>Looking forward to connecting with you!</p>
+                        <br>
+                    </div>
+                    <!-- (2) Email subscription form BEFORE submission -->
+                    <div class="contact beforeSubmit2">
+                        <h3>Stay Connected:</h3>
+                        <p>Join my mailing list to stay updated on my latest projects and innovations. Simply enter your email in the box below.</p>
+                        <div class="contactEmail">
+                            <form class="emailForm2" onsubmit="return false">
+                                <label for="email"></label>
+                                <input type="email" id="email2" name="email" placeholder="Your email..">
+                                <input id="emailSubmit2" type="submit" value="&#10148;">
+                            </form>
+                        </div>
+                    </div>
+                    <!-- (2) Email subscription form AFTER submission -->
+                    <div class="contact afterSubmit2">
+                        <h3>Welcome to the Community!</h3>
+                        <p>Thank you for subscribing to my mailing list. You’re now part of a community dedicated to innovation and sustainability. I’ll keep you updated with the latest news, projects and insights.</p>
+                        <br>
+                        <p>Expect to receive regular updates directly in your inbox, including exclusive content and early access to new developments. If you ever wish to unsubscribe, you can easily do so at any time.</p>
+                        <br>
+                    </div>
+                </main>
+            </div>
+            <!-- Footer structured into three columns -->
+            <footer id="footer" class="footerRow">
+                <!-- Left section: Email subscription form -->
+                <div class="footerColumn footerLeft">
+                    <form class="emailForm" onsubmit="return false">
+                        <label for="email">Stay updated on future innovations!</label>
+                        <input type="email" id="email" name="email" placeholder="Your email..">
+                        <input id="emailSubmit" type="submit" value="&#10148;">
+                    </form>
+                </div>
+                <!-- Middle section: Awards showcase -->
+                <div class="footerColumn footerMiddle">
+                    <div id="awards">
+                        <img class="award" src="assets/awards/7.png" title="2034 Sustainability Impact Awards (Winner)" alt="2034 Sustainability impact awards">
+                        <img class="award" src="assets/awards/1.png" title="2034 CES Innovation Awards (Winner)" alt="2034 CES innovation awards">
+                        <img class="award" src="assets/awards/2.png" title="2034 T3 Awards (Winner)" alt="T3 awards 2034 winner">
+                        <img class="award" src="assets/awards/3.png" title="2032 EG Tech Awards (Winner)" alt="EG Tech awards 2032">
+                        <img class="award" src="assets/awards/5.png" title="2032 Digi Green Tech Awards (Winner)" alt="2032 Green tech awards by Digi, winner of green vehicle technology category">
+                        <img class="award" src="assets/awards/4.png" title="2031 SDG Tech Awards (Nominee)" alt="SDG Tech awards denmark nominee 2031">
+                    </div>
+                </div>
+                <!-- Right section: Social media and contact links -->
+                <div class="footerColumn footerRight">
+                    <p class="contactme">Contact Me</p>
+                    <address id="socials">
+                        <a href="https://www.instagram.com/" target="_blank" class="social">
+                            <img src="assets/socials/instagram.png" alt="Instagram icon">
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank" class="social">
+                            <img src="assets/socials/linkedin.png" alt="Linkedin icon">
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank" class="social">
+                            <img src="assets/socials/youtube.png" alt="Youtube icon">
+                        </a>
+                        <a href="https://londoncs.slack.com/archives/D05UGL645N3" target="_blank" class="social">
+                            <img src="assets/socials/slack.png" alt="Slack icon">
+                        </a>
+                        <a href="mailto:kxwboon001@mymail.sim.edu.sg" target="_blank" class="social">
+                            <img src="assets/socials/email.png" alt="Email icon">
+                        </a>
+                    </address>
+                </div>
+            </footer>
+            <p class="copyright">© 2034 Winnie Boon. All rights reserved.</p>
+            <!-- Snackbar to notify successful email subscription -->
+            <div id="snackbar">I'll keep you updated!</div>
+            <!-- Snackbar to notify invalid form submission -->
+            <div id="snackbar2">Please fill up the form before submission.</div>
+        </div>
+        <!-- Global Scripts -->
+        <script src="scripts/topNav.js"></script>
+    </body>
+</html>
